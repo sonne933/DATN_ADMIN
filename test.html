@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm mới</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* Tương tự như phần trước */
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto; 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #222;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="file"] {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.btn.add-new-btn {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.add-new-btn:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+
+<body>
+    <button class="btn add-new-btn">
+        Thêm mới
+    </button>
+
+    <!-- Form Thêm mới -->
+    <div id="addForm" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Thêm mới</h2>
+            <form>
+                Danh mục: <input type="text" id="category" placeholder="Danh mục"><br><br>
+                Nội dung: <textarea id="content" placeholder="Nội dung"></textarea><br><br>
+                Hình ảnh: <input type="file" id="image"><br><br>
+                <button type="submit">Thêm mới</button>
+                <button type="button" class="close-btn">Thoát</button>
+            </form>
+        </div>
+    </div>
+
+    <script >
+        // Lấy modal và nút thêm mới
+const addForm = document.getElementById('addForm');
+const addNewBtn = document.querySelector('.add-new-btn');
+
+// Lấy nút đóng trong modal
+const closeBtn = addForm.querySelector('.close-btn');
+
+// Hiện form thêm mới khi nhấp vào nút Thêm mới
+addNewBtn.addEventListener('click', function() {
+    addForm.style.display = 'block';
+});
+
+// Đóng form khi nhấp vào nút đóng
+closeBtn.addEventListener('click', function() {
+    addForm.style.display = 'none';
+});
+
+// (Tùy chọn) Đóng form khi nhấp ra ngoài form
+window.addEventListener('click', function(event) {
+    if (event.target == addForm) {
+        addForm.style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+
+</html>

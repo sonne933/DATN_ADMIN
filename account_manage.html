@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>ADMIN</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html" class="logo">
+            <i class='bx bx-code-alt'></i>
+            <div class="logo-name"><span>AD</span>MIN</div>
+        </a>
+        <ul class="side-menu">
+            <li ><a href="index.html" class="title_sidemenu"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li class="active"><a href="account_manage.html" class="title_sidemenu"><i class='bx bx-group'></i>Quản Lý Tài Khoản</a></li>
+            <li ><a href="catalog_manage.html" class="title_sidemenu"><i class='bx bx-analyse'></i>Quản Lý Danh Mục</a></li>
+            <li><a href="service_manage.html" class="title_sidemenu"><i class='bx bx-message-square-dots'></i>Quản Lý Dịch Vụ</a></li>
+            <li><a href="statistical.html" class="title_sidemenu"><i class='bx bx-bar-chart-alt-2'></i>Thống Kê</a></li>
+          
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+           
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" class="theme-toggle"></label>
+           
+            <a href="#" class="profile">
+                <img src="images/admin.jpg">
+            </a>
+        </nav>
+
+        <!-- End of Navbar -->
+
+        <main>
+            <div class="header">
+                <div class="left">
+                    <h1 class="title-heading">Quản Lý Tài Khoản</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="#">
+                                Admin
+                            </a></li>
+                        /
+                        <li><a href="#" class="active">Quản Lý Tài Khoản</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- Insights -->
+            
+            <ul class="insights">
+                <li>
+                    <i class='bx bx-map-pin'></i>
+                    <span class="info">
+                        <h3>
+                            1
+                        </h3>
+                        <p>Admin</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-building-house'></i>
+                    <span class="info">
+                        <h3>
+                            4
+                        </h3>
+                        <p>User</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-user'></i>
+                    <span class="info">
+                        <h3>
+                            2
+                        </h3>
+                        <p>Seller</p>
+                    </span>
+                </li>
+                <!-- <li><i class='bx bx-dollar-circle'></i>
+                    <span class="info">
+                        <h3>
+                            6,742
+                        </h3>
+                        <p>Doanh thu</p>
+                    </span>
+                </li> -->
+            </ul>
+            <!-- End of Insights -->
+
+            <div class="bottom-data">
+             
+                <div class="orders">
+                    <div class="header">
+                        <i class='bx bx-receipt'></i>
+                        <h3>Thống kê tài khoản</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tài khoản</th>  
+                                <th>Số điện thoại</th>
+                                <th>Địa chỉ</th>
+                                <th>Email</th>
+                                <th>Ngày</th>
+                                <th>Loại tài khoản</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="images/profile-1.jpg">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>0123456789</td>
+                                <td>Đà Nẵng</td>
+                                <td>sonnguyen123@gmail.com</td>
+                                <td>14-08-2023</td>
+                                <td>Admin</td>
+                                <td><label class="switch active">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/profile-1.jpg">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>0123456789</td>
+                                <td>Đà Nẵng</td>
+                                <td>sonnguyen123@gmail.com</td>
+                                <td>14-08-2023</td>
+                                <td>Admin</td>
+                                <td><label class="switch ">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/profile-1.jpg">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>0123456789</td>
+                                <td>Đà Nẵng</td>
+                                <td>sonnguyen123@gmail.com</td>
+                                <td>14-08-2023</td>
+                                <td>Admin</td>
+                                <td><label class="switch active">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
