@@ -21,6 +21,8 @@
             <li ><a href="index.html" class="title_sidemenu"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
             <li ><a href="account_manage.html" class="title_sidemenu"><i class='bx bx-group'></i>Quản Lý Tài Khoản</a></li>
             <li ><a href="catalog_manage.html" class="title_sidemenu"><i class='bx bx-analyse'></i>Quản Lý Danh Mục</a></li>
+            <li><a href="tour_manage.html" class="title_sidemenu"><i class='bx bx-map-pin'></i>Quản Lý
+                Tour</a></li>
             <li class="active"><a href="service_manage.html" class="title_sidemenu"><i class='bx bx-message-square-dots'></i>Quản Lý Dịch Vụ</a></li>
             <li><a href="statistical.html" class="title_sidemenu"><i class='bx bx-bar-chart-alt-2'></i>Thống Kê</a></li>
           
@@ -68,12 +70,124 @@
             </div>
 
             <!-- Insights -->
-            
+            <ul class="insights">
+                <li>
+                    <i class='bx bx-building-house' ></i>
+                    <span class="info">
+                        <h3>
+                            1,074
+                        </h3>
+                        <p>Khách sạn</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-car' ></i>
+                    <span class="info">
+                        <h3>
+                            3,944
+                        </h3>
+                        <p>Xe</p>
+                    </span>
+                </li>
+                <li><i class='bx bx-bowl-hot' ></i>
+                    <span class="info">
+                        <h3>
+                            14,721
+                        </h3>
+                        <p>Ăn uống</p>
+                    </span>
+                </li>
+                
+            </ul>
         
             <!-- End of Insights -->
+            <!-- model edit and delete -->
+            <!-- Form Edit -->
+            <div id="editForm" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Sửa Thông Tin</h2>
+                    <form>
+                        Tên dịch vụ: <input type="text" id="name" placeholder="Tên"><br><br>
+                        Nội dung: <textarea id="details" placeholder="Chi tiết"></textarea><br><br>
+                        
+                        <button type="submit" class="btnluu">Lưu</button>
+                        <button type="button" class="close-btn">Thoát</button>
+                    </form>
+                </div>
+            </div>
 
+            <!-- Modal Delete Confirmation -->
+            <div id="deleteModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Bạn có muốn xóa không?</h2>
+                    <button class="btnxoa">Xóa</button>
+                    <button type="button" class="close-btn">Thoát</button>
+                </div>
+            </div>
+            <!--end model edit and delete -->
+            <!-- model newitem -->
+            <div id="addForm" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Thêm Mới Dịch Vụ</h2>
+                    <form>
+                        Tên dịch vụ: <input type="text" id="category" placeholder="Tên dịch vụ"><br><br>
+                        Nội dung: <textarea id="content" placeholder="Nội dung"></textarea><br><br>
+                      
+
+
+                        <button type="submit" class="btnluu">Thêm mới</button>
+                        <!-- <button type="button" class="close-btn">Thoát</button> -->
+                    </form>
+
+                </div>
+            </div>
+            <!-- end new item -->
             <div class="bottom-data">
-             
+                <div class="orders">
+                    <div class="header">
+                        <i class='bx bx-receipt'></i>
+                        <h3>Danh Sách Danh Mục</h3>
+                        <i class='bx bx-filter'></i>
+                        <button class="btn add-new-btn ">
+                            Thêm mới
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên dịch vụ</th>
+                                <th>Nội dung</th>                         
+                                <th>Trạng thái</th>
+                                <th>Hoạt động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Khách sạn</td>
+                                <td>Khách sạn Tú Tam kỳ</td>
+                                <td><label class="switch active">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label></td>
+                                <td>
+                                    <button class="btn edit-btn">
+                                        <i class="bx bx-edit"></i>
+                                    </button>
+
+                                    <button class="btn delete-btn">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
 
               
 

@@ -492,6 +492,7 @@ body{
 .content main .bottom-data .orders table tbody tr{
     cursor: pointer;
     transition: all 0.3s ease;
+   
 }
 
 .content main .bottom-data .orders table tbody tr:hover{
@@ -753,7 +754,7 @@ input[type="text"],
 textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -808,4 +809,13 @@ border-radius: 5px;
     
    
 background-color: #45a049;
+}
+
+/* noi dung tour */
+#noidungTour{
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+   
 }

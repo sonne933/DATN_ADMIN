@@ -23,17 +23,7 @@ const searchForm = document.querySelector('.content nav form');
 
 
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth < 768) {
-        sideBar.classList.add('close');
-    } else {
-        sideBar.classList.remove('close');
-    }
-    if (window.innerWidth > 576) {
-        searchBtnIcon.classList.replace('bx-x', 'bx-search');
-        searchForm.classList.remove('show');
-    }
-});
+
 
 const toggler = document.getElementById('theme-toggle');
 
@@ -104,7 +94,7 @@ switches.forEach(switchEl => {
 
 // model thêm mới
 
-         // Lấy modal và nút thêm mới
+ // Lấy modal và nút thêm mới
 const addForm = document.getElementById('addForm');
 const addNewBtn = document.querySelector('.add-new-btn');
 

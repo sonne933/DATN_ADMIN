@@ -21,10 +21,10 @@
             <li><a href="index.html" class="title_sidemenu"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
             <li><a href="account_manage.html" class="title_sidemenu"><i class='bx bx-group'></i>Quản Lý Tài Khoản</a>
             </li>
-            <li class="active"><a href="catalog_manage.html" class="title_sidemenu"><i class='bx bx-analyse'></i>Quản Lý
+            <li><a href="catalog_manage.html" class="title_sidemenu"><i class='bx bx-analyse'></i>Quản Lý
                     Danh Mục</a></li>
-                    <li><a href="tour_manage.html" class="title_sidemenu"><i class='bx bx-map-pin'></i>Quản Lý
-                        Tour</a></li>
+            <li><a href="tour_manage.html" class="title_sidemenu"><i class='bx bx-map-pin'></i>Quản Lý
+                    Tour</a></li>
             <li><a href="service_manage.html" class="title_sidemenu"><i class='bx bx-message-square-dots'></i>Quản Lý
                     Dịch Vụ</a></li>
             <li><a href="statistical.html" class="title_sidemenu"><i class='bx bx-bar-chart-alt-2'></i>Thống Kê</a></li>
@@ -60,54 +60,20 @@
         <main>
             <div class="header">
                 <div class="left">
-                    <h1 class="title-heading">Quản Lý Danh Mục</h1>
+                    <h1 class="title-heading">Quản Lý Danh Sách Tour</h1>
                     <ul class="breadcrumb">
                         <li><a href="#">
                                 Admin
                             </a></li>
                         /
-                        <li><a href="#" class="active">Quản Lý Danh Mục</a></li>
+                        <li><a href="#" class="active">Quản Lý Danh Sách Tour</a></li>
                     </ul>
                 </div>
 
             </div>
 
             <!-- Insights -->
-            <ul class="insights">
-                <li>
-                    <i class='bx bx-map-pin'></i>
-                    <span class="info">
-                        <h3>
-                            1,074
-                        </h3>
-                        <p>Du Lịch miền Bắc</p>
-                    </span>
-                </li>
-                <li><i class='bx bx-map-pin'></i>
-                    <span class="info">
-                        <h3>
-                            3,944
-                        </h3>
-                        <p>Du lịch miền trung</p>
-                    </span>
-                </li>
-                <li><i class='bx bx-map-pin'></i>
-                    <span class="info">
-                        <h3>
-                            14,721
-                        </h3>
-                        <p>Du lịch miền nam</p>
-                    </span>
-                </li>
-                <li><i class='bx bx-map-pin'></i>
-                    <span class="info">
-                        <h3>
-                            6,742
-                        </h3>
-                        <p>Du lịch nước ngoài</p>
-                    </span>
-                </li>
-            </ul>
+
 
             <!-- End of Insights -->
             <!-- model edit and delete -->
@@ -117,8 +83,9 @@
                     <span class="close-btn">&times;</span>
                     <h2>Sửa Thông Tin</h2>
                     <form>
-                        Tên danh mục: <input type="text" id="name" placeholder="Tên"><br><br>
+                        Tên danh mục: <input type="text" id="name" placeholder="Tên địa điểm"><br><br>
                         Nội dung: <textarea id="details" placeholder="Chi tiết"></textarea><br><br>
+                        Giá: <input type="text" id="price" placeholder="VNĐ"><br><br>
                         Hình ảnh: <input type="file" id="image"><br><br>
                         <button type="submit" class="btnluu">Lưu</button>
                         <button type="button" class="close-btn">Thoát</button>
@@ -140,12 +107,12 @@
             <div id="addForm" class="modal">
                 <div class="modal-content">
                     <span class="close-btn">&times;</span>
-                    <h2>Thêm Mới Danh Mục</h2>
+                    <h2>Thêm Mới Địa Điểm</h2>
                     <form>
-                        Danh mục: <input type="text" id="category" placeholder="Danh mục"><br><br>
+                        Tên địa điểm: <input type="text" id="category" placeholder="Tên địa điểm"><br><br>
                         Nội dung: <textarea id="content" placeholder="Nội dung"></textarea><br><br>
                         Hình ảnh:
-                        
+                        Giá: <input type="text" id="price" placeholder="VNĐ"><br><br>
                         <input type="file" id="image"><br><br>
 
 
@@ -161,7 +128,7 @@
                 <div class="orders">
                     <div class="header">
                         <i class='bx bx-receipt'></i>
-                        <h3>Danh Sách Danh Mục</h3>
+                        <h3>Danh Sách Tour</h3>
                         <i class='bx bx-filter'></i>
                         <button class="btn add-new-btn ">
                             Thêm mới
@@ -171,30 +138,86 @@
                         <thead>
                             <tr>
                                 <th>STT</th>
-                                <th>Tên danh mục</th>
+                                <th>Tên Địa điểm</th>
                                 <th>Nội dung</th>
                                 <th>Hình ảnh</th>
+                                <th>Giá</th>
                                 <th>Trạng thái</th>
                                 <th>Hoạt động</th>
                             </tr>
                         </thead>
                         <tbody>
-
                             <tr>
                                 <td>1</td>
-                                <td>Du Lịch Miền Băc</td>
-                                <td>Du Lịch Miền Băc</td>
-
+                                <td>Du Lịch Đà Nẵng</td>
+                                <td id="noidungTour">Du Lịch Miền Trung địa điểm TP Đà Nãng 
                                 <td>
                                     <img src="images/profile-1.jpg">
-
+                                </td>
+                                <td>
+                                    920.000 VND
                                 </td>
 
-
-                                <td><label class="switch active">
+                                <td>
+                                    <label class="switch active">
                                         <input type="checkbox">
                                         <span class="slider"></span>
-                                    </label></td>
+                                    </label>
+                                </td>
+                                <td>
+                                    <button class="btn edit-btn">
+                                        <i class="bx bx-edit"></i>
+                                    </button>
+
+                                    <button class="btn delete-btn">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Du Lịch Đà Nẵng</td>
+                                <td id="noidungTour">Du Lịch Miền Trung địa điểm TP Đà Nãng 
+                                <td>
+                                    <img src="images/profile-1.jpg">
+                                </td>
+                                <td>
+                                    920.000 VND
+                                </td>
+
+                                <td>
+                                    <label class="switch active">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <button class="btn edit-btn">
+                                        <i class="bx bx-edit"></i>
+                                    </button>
+
+                                    <button class="btn delete-btn">
+                                        <i class="bx bx-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Du Lịch Đà Nẵng</td>
+                                <td id="noidungTour">Du Lịch Miền Trung địa điểm TP Đà Nãng 
+                                <td>
+                                    <img src="images/profile-1.jpg">
+                                </td>
+                                <td>
+                                    920.000 VND
+                                </td>
+
+                                <td>
+                                    <label class="switch ">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </td>
                                 <td>
                                     <button class="btn edit-btn">
                                         <i class="bx bx-edit"></i>
